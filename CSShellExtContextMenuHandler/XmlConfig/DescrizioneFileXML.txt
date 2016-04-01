@@ -1,0 +1,52 @@
+﻿Il nodo radice si chiama radice
+i suoi figi possono essere 
+- item
+- menu
+
+gli attributi che vengono interpretati sono
+- nome: il nome dell'item che visualizzo a video
+- img:  è il nome del file immagine da usare come icona (solo file .bmp)
+- path: è il percorso (path assoluto) al programma che verrà lanciato 
+- opzione: l'opzione o le opzioni da passare al programma. Posso inoltre indicare
+			$progCurrDir : verrà tradottto come "c:\directory\checontiene\programma\lanciato" senza doppi apici
+			$fileCurrDir : verrà tradottto come "c:\directory\checontiene\ilPrimoFile\passato\come\argomento" doppi apici
+
+
+- kill: sono i nomi dei processi che verranno killati prima di far partire il programma
+        la stringa è così composta:
+		nomeProcesso1
+		nomeProcesso1|nomeprocesso2|$Self|nomeProcesso3
+
+		dove $Self è una scorciatoia per indicare il nome stesso del programma che verrà lanciato dopo
+
+- nrarg: il numero max di argomenti (file e folder) che verranno passate al programma. se non specificato indico 
+         come limito max 10000000
+
+- separatore: indica il separatore che verrà usato per separare i nomi dei file e delle cartelle selezionate. Se non specificato
+              il separatore è lo spazio singolo
+
+- suffixFolder: aggiungo alla fine del nome di ogni cartella selezionata il suffisso indicato
+
+- sleep;     prima di lanciare l'applicazione dormo per x millisecondi
+
+- prefixItem: normalmente i parametri (file e folder selezionati) passati al programma iniziano con " e terminano con "
+              se specificato prefixItem sostituisco " con prefixItem
+- suffixItem: normalmente i parametri (file e folder selezionati) passati al programma iniziano con " e terminano con "
+              se specificato suffixItem sostituisco " con suffixItem
+
+				LE QUATTRO VOCI CHE REGOLANO LA VISIBILITà DI UN ITEM sono
+
+- visible: se a false allora l'item non sarà visibile, se è un menu non vedrò il menu e i suoi figli
+- SN_Folder : di default le voci di item e menu si vedono per ogni tipo di file e folder, 
+              se indicato N allora la voce di menu o item non si vedrà se negli argomenti da passare al programma 
+			  c'è almeno una folder
+- MaxSize :   se uno dei file selezionati supera la dimensione indicati (MByte) l'item o menu non verrà visualizzato
+- Filtro_File: la stringa si compone come
+			   S oppure N | estensione1,estensione2,.....  (S sta per solo, N sta per No)
+			   esempio1: S|pdf,exe   la voce di menu o item a cui sarà applicato il filtro si vedrà solo tra gli argomenti
+			                         ci sono solo file pdf e exe
+			   esempio2: N|txt,xls   la voce di menu o item a cui sarà applicato il filtro si vedrà solo tra gli argomenti
+			                         non ci saranno file txt e xls
+
+
+l'item o menu lo vedrò solo le opzioni specificate sono tutte vere
