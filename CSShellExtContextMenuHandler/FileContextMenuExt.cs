@@ -34,22 +34,22 @@ namespace CSShellExtContextMenuHandler
     {
         // The name of the selected file. (guradare i vari punti xxxxxxx per gestire il caso di un solo file)
         private StringCollection selectedFiles;
-		
-		
-		private char SN_FileArg; //se 'S' allora ho come argomenti almeno un file, se no 'N'
+
+        //(S = Yes, N = No)
+		private char SN_FileArg; //se 'S' allora ho come argomenti almeno un file, se no 'N' 
         private char SN_FolderArg; //se 'S' allora ho come argomenti almeno un folder, se no 'N'
 
         private string verbCanonicalName = "shShell";
         private string verbHelpText = "shShell";
-        private string currentDir = ""; //directory corrente della dll
+        private string currentDir = ""; //directory corrente della dll (dll curr directory)
         private uint IDM_DISPLAY = 0;
         private uint IDM_CMDFIRST;  //è idCmdFirst passato in QuryContextMenu
-        private string listaEstensioniFile = ""; //elencate le estensioni dei file selezionati (es:   exe,PDF,xls,)
-        private string sSizeFiles = ""; //lencate le dimensioni dei file selezionati in MByte (es: 50,2,4,)
+        private string listaEstensioniFile = ""; //elencate le estensioni dei file selezionati (es:   exe,PDF,xls,) (list extensions)
+        private string sSizeFiles = ""; //elencate le dimensioni dei file selezionati in MByte (es: 50,2,4,) (size files)
         private List<ItemXML> listaItem = new List<ItemXML>(); //lista pathProg e opzionoi passati via xml
 		
 		
-        #region FunzioniPersonalizzate
+        #region my personal function
         
         /// <summary>
         /// /questa è il metodo che invoco alla fine di tutto, in selectedFiles ho file scelti
@@ -214,7 +214,6 @@ namespace CSShellExtContextMenuHandler
             NativeMethods.InsertMenuItem(hMenu, posizione, true, ref mii);
         }
 
-
         /// <summary>
         /// popolo il menu hMenu con gli item e i sottomenu descritti nel file xml
         /// </summary>
@@ -249,7 +248,6 @@ namespace CSShellExtContextMenuHandler
             }
         }
 
-
         /// <summary>
         /// mi posiziono sull'end element del nodo corrente
         /// </summary>
@@ -263,7 +261,6 @@ namespace CSShellExtContextMenuHandler
                     break;
             }
         }
-
 
         /// <summary>
         /// sul nodo corrente ciclo su tutti gli attributi e valorizzo le variabili passate come paramtri
@@ -300,7 +297,6 @@ namespace CSShellExtContextMenuHandler
             }
         }
 
-
         public bool saltaNodo(XmlTextReader reader)
         {
             string visible = "";
@@ -316,10 +312,6 @@ namespace CSShellExtContextMenuHandler
             return false; 
         }
 
-
-
-
-
         //ritorno la lista delle estensioni dei file selezionati nella forma  pdf,exe,ppt, (con la virgola finale)
         public void setListaEstensioniFile()
         {
@@ -329,7 +321,6 @@ namespace CSShellExtContextMenuHandler
                     listaEstensioniFile += System.IO.Path.GetExtension(s) + ",";
             }
         }
-
 
         //setto le variabili
         //SN_FileArg;      se 'S' allora ho come argomenti almeno un file, se non 'N'
@@ -348,7 +339,6 @@ namespace CSShellExtContextMenuHandler
             }
         }
 
-
         //setto la stringa sSizeFiles che elenca le dimensioni dei file selezionati in MByte (es: 50,2,4,)
         public void creaStringaDimensioniFiles()
         {
@@ -359,13 +349,8 @@ namespace CSShellExtContextMenuHandler
             }
         }
 
-
-
-
         
         #endregion
-
-               
 
         #region Shell Extension Registration
 
@@ -410,9 +395,7 @@ namespace CSShellExtContextMenuHandler
 
         #endregion
 
-
         #region IShellExtInit Members
-
         /// <summary>
         /// Initialize the context menu handler.
         /// </summary>
@@ -535,9 +518,7 @@ namespace CSShellExtContextMenuHandler
                 NativeMethods.ReleaseStgMedium(ref stm);
             }
         }
-
         #endregion
-
 
         #region IContextMenu Members
 	
@@ -650,7 +631,7 @@ namespace CSShellExtContextMenuHandler
 			
 			
 			
-			//ORIGINALE
+			//original source code
 			/*
             MENUITEMINFO mii = new MENUITEMINFO();
             mii.cbSize = (uint)Marshal.SizeOf(mii);
@@ -703,7 +684,7 @@ namespace CSShellExtContextMenuHandler
 			
 			
 		
-			//ORIGINALE
+			//original source code
 			/*
             bool isUnicode = false;
 

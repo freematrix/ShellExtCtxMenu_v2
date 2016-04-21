@@ -1,74 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <radice>
-	<item nome="separatore"></item>
-	
-  <menu nome="Varie">
-
-    <item nome="spostaDelete" img="spostaDelete.bmp" path="M:\prg\portable\spostaDelete\spostaDelete.exe"></item>
-    <item nome="spostaDelete UNDO" path="M:\prg\portable\spostaDelete\spostaDelete.exe" opzione=":undo"></item>
-    <item nome="separatore"></item>
-    <item nome="NotePad++"    img="nnappicon_32.bmp" path="M:\prg\portable\Notepad++\notepad++.exe"></item>
-    <item nome="separatore"></item>
-    <item nome="phJoin" img="fulmine.bmp" path="M:\prg\portable\pHJoin.exe" SN_Folder="N"></item>
-    <item nome="Foxit Reader" visible="false" img="ffappicon_32.bmp" path="M:\prg\portable\FoxitReaderPortable\FoxitReaderPortable.exe" SN_Folder="N" MaxSize="500" Filtro_File="S|pdf"></item>
-	<item nome="GIMP"         visible="false" img="ggappicon_32.bmp" path="C:\Documents and Settings\pablo\Desktop\Data\GIMPPortable\GIMPPortable.exe" SN_Folder="N" MaxSize="500"></item>
-		
-		<menu nome="TestWF" img="key-422.bmp">
-			<item nome="Normale"          path="M:\prg\portable\Testwf.exe" ></item>
-			<item nome="separatore"></item>
-			<item nome="CRC32"            path="M:\prg\portable\Testwf.exe" opzione=":-ovCRC32"></item>
-			<item nome="MD5"              path="M:\prg\portable\Testwf.exe" opzione=":-ovMD5"></item>
-			<item nome="SHA1"             path="M:\prg\portable\Testwf.exe" opzione=":-ovSHA1"></item>
-			<item nome="separatore"></item>
-			<item nome="Check (*.txth)"   path="M:\prg\portable\Testwf.exe" opzione=":-ev"></item>
-			<item nome="Check Name Based" path="M:\prg\portable\Testwf.exe" opzione=":-pv"></item>
-		</menu>
-		<menu nome="phpHash">
-			<item nome="crc32" path="M:\xampp\php\php.exe" opzione="&quot;M:\SVL\php\hashFile.php&quot; &quot;INI_algo=crc32&quot; &quot;INI_fileOutput=$fileCurrDir/phpHash.txth&quot;" prefixItem="&quot;INI_fileDirInput=" suffixItem="&quot;" ></item>
-			<item nome="md5"   path="M:\xampp\php\php.exe" opzione="&quot;M:\SVL\php\hashFile.php&quot; &quot;INI_algo=md5&quot;   &quot;INI_fileOutput=$fileCurrDir/phpHash.txth&quot;" prefixItem="&quot;INI_fileDirInput=" suffixItem="&quot;" ></item>
-			<item nome="sha1"  path="M:\xampp\php\php.exe" opzione="&quot;M:\SVL\php\hashFile.php&quot; &quot;INI_algo=sha1&quot;  &quot;INI_fileOutput=$fileCurrDir/phpHash.txth&quot;" prefixItem="&quot;INI_fileDirInput=" suffixItem="&quot;" ></item>
-			<item nome="checkNomeFileCRC32" path="M:\xampp\php\php.exe" opzione="&quot;M:\SVL\php\hashFile.php&quot; &quot;INI_algo=checkNomeFileCRC32&quot; &quot;INI_fileOutput=$fileCurrDir/phpHash.txth&quot;" prefixItem="&quot;INI_fileDirInput=" suffixItem="&quot;" ></item>
-			<item nome="separatore"></item>
-			<item nome="crc32 - md5" path="M:\xampp\php\php.exe" opzione="&quot;M:\SVL\php\hashFile.php&quot; &quot;INI_algo=crc32&quot; &quot;INI_algo=md5&quot; &quot;INI_fileOutput=$fileCurrDir/phpHash.txth&quot;" prefixItem="&quot;INI_fileDirInput=" suffixItem="&quot;" ></item>
-			<item nome="crc32 - sha1" path="M:\xampp\php\php.exe" opzione="&quot;M:\SVL\php\hashFile.php&quot; &quot;INI_algo=crc32&quot; &quot;INI_algo=sha1&quot; &quot;INI_fileOutput=$fileCurrDir/phpHash.txth&quot;"  prefixItem="&quot;INI_fileDirInput=" suffixItem="&quot;" ></item>
-			<item nome="md5 - sha1" path="M:\xampp\php\php.exe" opzione="&quot;M:\SVL\php\hashFile.php&quot; &quot;INI_algo=md5&quot; &quot;INI_algo=sha1&quot; &quot;INI_fileOutput=$fileCurrDir/phpHash.txth&quot;" prefixItem="&quot;INI_fileDirInput=" suffixItem="&quot;" ></item>
-			<item nome="separatore"></item>
-			<item nome="crc32 - md5 - sha1" path="M:\xampp\php\php.exe" opzione="&quot;M:\SVL\php\hashFile.php&quot; &quot;INI_algo=crc32&quot; &quot;INI_algo=md5&quot; &quot;INI_algo=sha1&quot; &quot;INI_fileOutput=$fileCurrDir/phpHash.txth&quot;" prefixItem="&quot;INI_fileDirInput=" suffixItem="&quot;" ></item>
-			<item nome="separatore"></item>
-			<item nome="check txth" path="M:\xampp\php\php.exe" opzione="&quot;M:\SVL\php\hashFile.php&quot; &quot;INI_fileOutput=$fileCurrDir/phpHash_check.txth&quot; &quot;INI_fileDirInput=$fileCurrDir&quot;" prefixItem="&quot;INI_fileCheck=" suffixItem="&quot;" ></item>
-		</menu>
-		<item nome="CDImage" path="M:\prg\portable\cdImage\esegui.bat" ></item>
-	</menu>
-
-  <menu nome="Media">
-    <item nome="MPUI" path="M:\prg\portable\MPlayer for Windows\MPUI.exe" img="MPUI.bmp" kill="$Self|MPlayer.exe" ></item>
-    <item nome="VLC" path="M:\prg\portable\VLCPortable\VLCPortable.exe" img="vlc.bmp" ></item>
-    <item nome="separatore"></item>
-    <item nome="FooBar"       img="foobar.bmp"       path="M:\prg\portable\foobar2000\foobar2000.exe"></item>
-    <item nome="separatore"></item>
-    <item nome="MediaInfo"    img="MediaInfo.bmp"    path="M:\prg\portable\MediaInfo_CLI_0.7.36\gestMedInfo.exe"></item>
-  </menu>
-
-  <menu nome="Editor" SN_Folder="N" MaxSize="100" visible="false">
-    <item nome="NotePad++"    img="nnappicon_32.bmp" path="M:\prg\portable\Notepad++\notepad++.exe"></item>
-    <item nome="PsPad"        img="pspad.bmp"        path="M:\prg\portable\pspad454en\PSPad.exe"></item>
-    <item nome="GVim"         img="appicon_32.bmp"   path="M:\prg\portable\gVimPortable\gVimPortable.exe"></item>
-  </menu>
-
-  <menu nome="IZArc2Go" img="IZArc2Go.bmp" visible="false">
-		<item nome="Apri PopUp"           path="M:\prg\portable\IZArc2Go\IZArc2Go.exe" nrarg="1" SN_Folder="N" ></item>
-		<item nome="separatore"></item>
-		<item nome="Crea archivio PopUp"  path="M:\prg\portable\IZArc2Go\IZArc2Go.exe" opzione="-a" separatore=";" suffixFolder="\*.*"></item>
-		<item nome="Crea Zip"             path="M:\prg\portable\IZArc2Go\IZArc2Go.exe" opzione="-ad" separatore=";" suffixFolder="\*.*"></item>
-		<item nome="separatore"></item>
-		<item nome="Estrai PopUp"         path="M:\prg\portable\IZArc2Go\IZArc2Go.exe" opzione="-e &quot;$fileCurrDir&quot;"  separatore=";" SN_Folder="N"></item>
-		<item nome="Estrai Qui"           path="M:\prg\portable\IZArc2Go\IZArc2Go.exe" opzione="-eh &quot;$fileCurrDir&quot;" separatore=";" SN_Folder="N" ></item>
-		<item nome="Estrai Qui NomeFile"  path="M:\prg\portable\IZArc2Go\IZArc2Go.exe" opzione="-ef &quot;$fileCurrDir&quot;" separatore=";" SN_Folder="N"></item>
-	</menu>
-	
-	<menu nome="MGFiles" img="cool-toolbar32.bmp">
-		<item nome="MGFiles"                   path="M:\prg\portable\MGFiles\MGFiles.exe" ></item>
-		<item nome="MGFiles accoda"            path="M:\prg\portable\MGFiles\MGFiles.exe" opzione=":a"></item>
-		<item nome="MGFiles accoda invisibile" path="M:\prg\portable\MGFiles\MGFiles.exe" opzione=":ai"></item>
+	<item nome="separatore"/>
+	<item nome="NotePad++"    img="nnappicon_32.bmp" path="C:\Users\developer-s10\Desktop\Vari\programmi\npp.6.9.1.bin\notepad++.exe"/>
+	<menu nome="Media">
+		<item nome="VLC" path="M:\prg\portable\VLCPortable\VLCPortable.exe" img="vlc.bmp" />
+		<item nome="separatore"/>
+		<item nome="FooBar" img="foobar.bmp" path="M:\prg\portable\foobar2000\foobar2000.exe"/>
 	</menu>
 </radice>

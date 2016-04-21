@@ -135,10 +135,11 @@
     <Content Include="XmlConfig\DescrizioneFileXML.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="XmlConfig\xmlSetting.xml">
+    <Content Include="XmlConfig\xmlSetting_full.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
-    <Content Include="XmlConfig\xmlSetting_simple.xml">
+    <Content Include="XmlConfig\xmlSetting.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
